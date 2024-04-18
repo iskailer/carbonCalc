@@ -1,0 +1,72 @@
+.calculator {
+    max-width: 400px;
+    margin: 50px auto;
+    padding: 20px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    text-align: center;
+	background-color: rgba(128, 128, 128, 0.7); /* Cinza com 50% de transparência */
+}
+
+input[type="number"], button {
+    margin: 10px 0;
+    padding: 8px;
+    width: 100%;
+    box-sizing: border-box;
+}
+
+button {
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #45a049;
+}
+
+#result {
+    margin-top: 20px;
+    font-size: 18px;
+}
+
+.bg {
+	z-index: -1;
+  position: fixed; 
+  top: 0; 
+  left: 0; 
+	
+  /* Preserve aspet ratio */
+  min-width: 100%;
+  min-height: 100%;
+}
+
+    /*.calculator: Esta regra aplica estilos a elementos com a classe "calculator".
+        max-width: 400px;: Define a largura máxima do elemento como 400 pixels.
+        margin: 50px auto;: Define as margens superior e inferior como 50 pixels e as laterais como automáticas, o que centraliza o elemento horizontalmente na página.
+        padding: 20px;: Adiciona um preenchimento interno de 20 pixels ao redor do elemento.
+        border: 1px solid #ccc;: Adiciona uma borda de 1 pixel sólida com cor cinza claro (#ccc).
+        border-radius: 5px;: Arredonda os cantos da borda em 5 pixels.
+        text-align: center;: Centraliza o texto dentro do elemento.
+
+    input[type="number"], button: Esta regra aplica estilos a elementos <input> do tipo "number" e elementos <button>.
+        margin: 10px 0;: Define as margens superior e inferior como 10 pixels e as laterais como 0, o que adiciona um espaço entre os elementos.
+        padding: 8px;: Adiciona um preenchimento interno de 8 pixels ao redor dos elementos.
+        width: 100%;: Define a largura dos elementos como 100% do seu contêiner pai.
+        box-sizing: border-box;: Faz com que a largura e a altura dos elementos incluam o preenchimento e a borda, em vez de aumentar além do contêiner.
+
+    button: Esta regra aplica estilos apenas a elementos <button>.
+        background-color: #4CAF50;: Define a cor de fundo como um verde (#4CAF50).
+        color: white;: Define a cor do texto como branca.
+        border: none;: Remove a borda do botão.
+        border-radius: 5px;: Arredonda os cantos da borda do botão em 5 pixels.
+        cursor: pointer;: Altera o cursor do mouse para um ponteiro quando passado sobre o botão.
+
+    button:hover: Esta regra aplica estilos quando o cursor do mouse está sobre um botão.
+        background-color: #45a049;: Define uma nova cor de fundo mais escura (#45a049).
+
+    #result: Esta regra aplica estilos a um elemento com o ID "result".
+        margin-top: 20px;: Define uma margem superior de 20 pixels para o elemento.
+        font-size: 18px;: Define o tamanho da fonte como 18 pixels.*/
