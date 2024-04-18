@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pegada de Carbono de Caminhão Diesel</title>
+    <link rel="stylesheet" href="styles.css"> 
+</head>
+<body>
+	<div class="bg">
+		<img src="https://observatorio3setor.org.br/wp-content/uploads/2024/03/AdobeStock_679341640-scaled.jpeg" alt="">
+	</div>
+    <div class="calculator">
+        <h1>Calculadora de Pegada de Carbono</h1>
+		<h2>Caminhão Diesel</h2>
+        <form id="carbonForm">
+            <label for="fuel">Quantidade de Combustível Usada (litros):</label>
+            <input type="number" id="fuel" name="fuel" required step="0.01" min="0" value="0.00">
+
+            <label for="distance">Distância Percorrida (km):</label>
+            <input type="number" id="distance" name="distance" required step="0.01" min="0" max="10000" value="0.00">
+
+			<p>Fator de emissão de carbono do combustível: 2.68kg CO2/l</p>
+			<p>Emissões de carbono por quilômetro: 0.12kg CO2/km</p>
+            <button type="submit">Calcular</button>
+        </form>
+        <button id="startVoice">Falar</button>
+        <div id="result"></div>
+    </div>
+    <script src="http://cdnjs.cloudflare.com/ajax/libs/annyang/2.6.0/annyang.min.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>
+
+<!--
+    <!DOCTYPE html>: Esta declaração define o tipo de documento e a versão do HTML que o navegador deve esperar. Neste caso, é o HTML5.
+
+    <html lang="pt-br">: Esta é a tag de abertura do elemento HTML e define a linguagem do documento como português brasileiro.
+
+    <head>: Esta é a seção do documento HTML que contém metadados, como o título da página, links para folhas de estilo, scripts, etc.
+
+    <meta charset="UTF-8">: Esta meta tag define o conjunto de caracteres utilizado no documento como UTF-8, que suporta uma vasta gama de caracteres, útil para textos em diferentes idiomas.
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">: Esta meta tag define a configuração de visualização do dispositivo, onde "width=device-width" ajusta a largura da página para corresponder à largura do dispositivo e "initial-scale=1.0" define o nível de zoom inicial da página.
+
+    <title>Pegada de Carbono de Caminhão Diesel</title>: Esta tag define o título da página, que será exibido na barra de título do navegador ou na aba.
+
+    <link rel="stylesheet" href="styles.css">: Este elemento <link> é usado para vincular o arquivo CSS externo chamado "styles.css", que será aplicado ao documento HTML para estilização.
+
+    </head>: Esta tag fecha a seção <head> do documento HTML.
+
+    <body>: Esta é a seção principal do documento HTML que contém todo o conteúdo visível da página.
+
+    <div class="calculator">: Esta é uma div com a classe "calculator", usada para agrupar elementos relacionados, provavelmente para estilização ou manipulação com JavaScript.
+
+    <h1>Calculadora de Pegada de Carbono</h1>: Este é um cabeçalho de primeiro nível que indica o título principal da página.
+
+    <h2>Caminhão Diesel</h2>: Este é um cabeçalho de segundo nível que fornece um subtítulo.
+
+    <form id="carbonForm">: Esta é uma tag de formulário que engloba os campos e elementos que serão submetidos. O atributo "id" é usado para identificar exclusivamente este formulário.
+
+    <label for="fuel">Quantidade de Combustível Usada (litros):</label>: Este é um rótulo associado a um campo de entrada de dados com o id "fuel", que indica ao usuário qual informação deve ser inserida.
+
+    <input type="number" id="fuel" name="fuel" required step="0.01" min="0" value="0.00">: Este é um campo de entrada numérico para inserir a quantidade de combustível usado. Os atributos required, step, min, e value especificam que o campo é obrigatório, permite incrementos de 0.01, tem um valor mínimo de 0 e um valor inicial de 0.00.
+
+    <label for="distance">Distância Percorrida (km):</label>: Outro rótulo associado a um campo de entrada de dados com o id "distance", indicando a informação a ser inserida.
+
+    <input type="number" id="distance" name="distance" required step="0.01" min="0" max="10000" value="0.00">: Este é um campo de entrada numérico para inserir a distância percorrida. Assim como o campo de combustível, este campo é obrigatório, permite incrementos de 0.01, tem um valor mínimo de 0, um valor máximo de 10000, e um valor inicial de 0.00.
+
+    <p>Fator de emissão de carbono do combustível: 2.3kg CO2/l</p>: Este é um parágrafo que fornece informações sobre o fator de emissão de carbono do combustível.
+
+    <p>Emissões de carbono por quilômetro: 0.12kg CO2/km</p>: Outro parágrafo que fornece informações sobre as emissões de carbono por quilômetro.
+
+    <button type="submit">Calcular</button>: Este é um botão de envio que, quando clicado, submeterá o formulário.
+
+    </form>: Esta tag fecha o formulário.
+
+    <button id="startVoice">Falar</button>: Este é um botão usado para iniciar algum tipo de funcionalidade de reconhecimento de voz. O atributo "id" é usado para identificar exclusivamente este botão.
+
+    <div id="result"></div>: Este é um elemento de divisão usado para exibir o resultado do cálculo da pegada de carbono. O atributo "id" é usado para identificar exclusivamente este elemento.
+
+    </div>: Esta tag fecha a div com a classe "calculator".
+
+    <script src="http://cdnjs.cloudflare.com/ajax/libs/annyang/2.6.0/annyang.min.js"></script>: Esta tag é usada para incluir um script externo, que neste caso é a biblioteca Annyang, utilizada para reconhecimento de voz.
+
+    <script src="script.js"></script>: Esta tag é usada para incluir um script JavaScript localizado no arquivo "script.js", que provavelmente contém a lógica para realizar o cálculo da pegada de carbono e exibir o resultado na página.
+
+    </body>: Esta tag fecha a seção <body> do documento HTML.
+
+    </html>: Esta tag fecha o elemento HTML.
+	-->
