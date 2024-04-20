@@ -34,8 +34,10 @@ function startVoiceCommand() {
             'calcular': function() {
                 // Simula o clique no botão de submit quando o comando de voz é acionado
                 document.getElementById('carbonForm').dispatchEvent(new Event('submit'));
-            },			
-			'*txt':test
+            },	
+		'Quantidade (de) (Combustível) (Usada) *fuel(litros)': setFuel,
+		'Distância (Percorrida) (de) *distance(quilômetros)(quilometros)(km)': setDistance,
+		'*txt':test
         };
 
         // Adiciona os comandos de voz
@@ -52,6 +54,18 @@ function startVoiceCommand() {
 function test(txt){
   console.log (txt);
   annyang.pause();
+};
+
+function setFuel(fuel) {
+  if (!isNaN(parseFloat(fuel))) {
+    document.getElementById("fuel").value = fuel;
+  }
+};
+
+function setDistance(distance) {
+  if (!isNaN(parseFloat(distance))) {
+    document.getElementById("distance").value = distance;
+  }
 };
 
 /*
