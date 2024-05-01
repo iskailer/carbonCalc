@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pegada de Carbono de Caminhão Diesel</title>
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+</head>
+
+<body class="bg-gradient-to-r from-violet-500 to-fuchsia-500">
+    <div class="container mx-auto mt-8">
+        <div class="max-w-md mx-auto bg-white rounded-lg shadow-lg overflow-hidden">
+            <div class="px-6 py-4">
+                <h1 class="text-xl font-semibold text-gray-800">Calculadora de Pegada de Carbono</h1>
+                <h2 class="text-md text-gray-600 mt-2">Caminhão Diesel</h2>
+                <form id="carbonForm" class="mt-4">
+                    <label for="fuel" class="block text-sm font-medium text-gray-700">Quantidade de Combustível Usada (litros):</label>
+                    <input type="number" id="fuel" name="fuel" required step="0.01" min="0" value="0.00"
+                        class="mt-1 block w-full px-3 py-2 border rounded-md shadow-sm focus:outline-none focus:border-indigo-500 focus:ring focus:ring-indigo-500">
+
+                    <label for="fuelType" class="block mt-4 text-sm font-medium text-gray-700">Tipo de Combustível:</label>
+                    <select id="fuelType" name="fuelType" class="mt-1 block w-full px-3 py-2 border rounded-md shadow-sm focus:outline-none focus:border-indigo-500 focus:ring focus:ring-indigo-500">
+                        <option value="diesel">Diesel</option>
+                        <option value="gasolina">Gasolina</option>
+                        <option value="etanol">Etanol</option>
+                        <option value="gnv">Gás Natural Veicular (GNV)</option>
+                    </select>
+
+                    <label for="distance" class="block mt-4 text-sm font-medium text-gray-700">Distância Percorrida (km):</label>
+                    <input type="number" id="distance" name="distance" required step="0.01" min="0" max="10000"
+                        value="0.00"
+                        class="mt-1 block w-full px-3 py-2 border rounded-md shadow-sm focus:outline-none focus:border-indigo-500 focus:ring focus:ring-indigo-500">
+
+                    <p class="mt-4 text-sm text-gray-600">Fator de emissão de carbono do combustível: 2.68kg CO2/l</p>
+                    <p class="text-sm text-gray-600">Emissões de carbono por quilômetro: 0.12kg CO2/km</p>
+
+                </form>
+
+                <button id="calculate"
+                        class="mt-4 w-full bg-indigo-500 text-white py-2 px-4 border border-transparent rounded-md shadow-sm hover:bg-indigo-600 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500">
+                    Calcular
+                </button>
+
+                <button id="startVoice"
+                        class="mt-4 w-full bg-red-500 text-white py-2 px-4 border border-transparent rounded-md shadow-sm hover:bg-green-600 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-green-500">
+                    Falar
+                </button>
+
+                <button id="loadTableBtn"
+                    class="mt-4 w-full bg-blue-500 text-white py-2 px-4 border border-transparent rounded-md shadow-sm hover:bg-blue-600 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-blue-500">
+                    Carregar Tabela
+                </button>
+                <div id="result" class="mt-4"></div>
+                <div id="tableContainer"></div>
+            </div>
+        </div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/pouchdb@7.2.2/dist/pouchdb.min.js"></script>
+    <script src="http://cdnjs.cloudflare.com/ajax/libs/annyang/2.6.0/annyang.min.js"></script>
+    <script src="script.js"></script>
+</body>
+
+</html>
