@@ -4,16 +4,16 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Pegada de Carbono de Caminhão Diesel</title>
-    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+    <title>Calculadora - Pegada de Carbono</title>
+    <script src="https://cdn.tailwindcss.com"></script>
 </head>
 
 <body class="bg-gradient-to-r from-violet-500 to-fuchsia-500">
     <div class="container mx-auto mt-8">
         <div class="max-w-md mx-auto bg-white rounded-lg shadow-lg overflow-hidden">
             <div class="px-6 py-4">
-                <h1 class="text-xl font-semibold text-gray-800">Calculadora de Pegada de Carbono</h1>
-                <h2 class="text-md text-gray-600 mt-2">Caminhão Diesel</h2>
+                <h1 class="text-xl font-semibold text-gray-800">Pegada de Carbono</h1>
+                <h2 class="text-md text-gray-600 mt-2">Calculadora Simplificada escopo 1</h2>
                 <form id="carbonForm" class="mt-4">
                     <label for="fuel" class="block text-sm font-medium text-gray-700">Quantidade de Combustível Usada (litros):</label>
                     <input type="number" id="fuel" name="fuel" required step="0.01" min="0" value="0.00"
@@ -34,31 +34,27 @@
 
                     <p class="mt-4 text-sm text-gray-600">Fator de emissão de carbono do combustível: 2.68kg CO2/l</p>
                     <p class="text-sm text-gray-600">Emissões de carbono por quilômetro: 0.12kg CO2/km</p>
-
-                </form>
-
-                <button id="calculate"
+                    <button type="submit"
                         class="mt-4 w-full bg-indigo-500 text-white py-2 px-4 border border-transparent rounded-md shadow-sm hover:bg-indigo-600 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500">
-                    Calcular
+                        Calcular
+                    </button>
+                </form>
+                <button id="saveDataBtn"
+                    class="mt-4 w-full bg-green-500 text-white py-2 px-4 border border-transparent rounded-md shadow-sm hover:bg-green-600 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-green-500">
+                    Salvar Dados
                 </button>
-
-                <button id="startVoice"
-                        class="mt-4 w-full bg-red-500 text-white py-2 px-4 border border-transparent rounded-md shadow-sm hover:bg-green-600 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-green-500">
-                    Falar
-                </button>
-
                 <button id="loadTableBtn"
                     class="mt-4 w-full bg-blue-500 text-white py-2 px-4 border border-transparent rounded-md shadow-sm hover:bg-blue-600 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-blue-500">
                     Carregar Tabela
                 </button>
                 <div id="result" class="mt-4"></div>
-                <div id="tableContainer"></div>
+                <div id="savedData" class="mt-8"></div>
             </div>
         </div>
     </div>
 
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/annyang/2.6.0/annyang.min.js"></script> 
     <script src="https://cdn.jsdelivr.net/npm/pouchdb@7.2.2/dist/pouchdb.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/annyang/2.6.0/annyang.min.js"></script>
     <script src="script.js"></script>
 </body>
 
