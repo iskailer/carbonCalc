@@ -90,3 +90,4 @@ document.getElementById('saveDataBtn').addEventListener('click', function () {
 document.getElementById('loadTableBtn').addEventListener('click', function () {
     displaySavedData();
 });
+
