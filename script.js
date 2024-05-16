@@ -1,4 +1,3 @@
-
 const db = new PouchDB('carbon_footprint');
 
 function saveData(formData) {
