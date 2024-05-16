@@ -91,3 +91,78 @@ document.getElementById('saveDataBtn').addEventListener('click', function () {
 document.getElementById('loadTableBtn').addEventListener('click', function () {
     displaySavedData();
 });
+
+        document.addEventListener('DOMContentLoaded', function () {
+            var tour = new Shepherd.Tour({
+                defaultStepOptions: {
+                    classes: 'shepherd-theme-arrows'
+                }
+            });
+
+            // Passo para o input de combustível
+            tour.addStep({
+                id: 'step-fuel',
+                text: 'Digite a quantidade de combustível usada em litros.',
+                attachTo: {
+                    element: '#fuel',
+                    on: 'bottom'
+                },
+                buttons: [
+                    {
+                        text: 'Próximo',
+                        action: tour.next
+                    }
+                ]
+            });
+
+            // Passo para o select de tipo de combustível
+            tour.addStep({
+                id: 'step-fuelType',
+                text: 'Selecione o tipo de combustível.',
+                attachTo: {
+                    element: '#fuelType',
+                    on: 'bottom'
+                },
+                buttons: [
+                    {
+                        text: 'Próximo',
+                        action: tour.next
+                    }
+                ]
+            });
+
+            // Passo para o input de distância
+            tour.addStep({
+                id: 'step-distance',
+                text: 'Digite a distância percorrida em quilômetros.',
+                attachTo: {
+                    element: '#distance',
+                    on: 'bottom'
+                },
+                buttons: [
+                    {
+                        text: 'Próximo',
+                        action: tour.next
+                    }
+                ]
+            });
+
+            // Passo para o botão de calcular
+            tour.addStep({
+                id: 'step-calculate',
+                text: 'Clique no botão "Calcular" para obter o resultado.',
+                attachTo: {
+                    element: 'button[type="submit"]',
+                    on: 'bottom'
+                },
+                buttons: [
+                    {
+                        text: 'Fim',
+                        action: tour.complete
+                    }
+                ]
+            });
+
+            // Inicie o tour automaticamente
+            tour.start();
+        });
